@@ -242,6 +242,28 @@
                                     icon="sap-icon://edit"
                                     press="onClickEWBUpdateOpen"
                                 />
+                                   <MenuItem id="_IDGenMenuItem12"
+                                    text="Generate JSON"
+                                    icon="sap-icon://group-2"
+                                >
+                                    <items>
+                                        <MenuItem id="_IDGenMenuItem13"
+                                            text="IRN"
+                                            icon="sap-icon://detail-more"
+                                            press="onClickIRNJSON"
+                                        />
+                                        <MenuItem id="_IDGenMenuItem17"
+                                            text="Eway Bill"
+                                            icon="sap-icon://detail-more"
+                                            press="onClickEWBJSON"
+                                        />
+                                        <MenuItem id="_IDGenMenuItem18"
+                                            text="Eway Bill by IRN"
+                                            icon="sap-icon://detail-more"
+                                            press="onClickEWBBYIRNJSON"
+                                        />
+                                    </items>
+                                </MenuItem>
                             </Menu>
                         </menu>
                     </MenuButton>

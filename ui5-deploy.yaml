@@ -20,7 +20,7 @@ builder:
         app:
           name: ZIRN
           package: ZEWAYBILL
-          transport: NXSK900941
+          transport: NXSK902304
         exclude:
           - /test/
   resources:

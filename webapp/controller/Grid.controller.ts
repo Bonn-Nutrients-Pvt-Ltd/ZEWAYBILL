@@ -2407,6 +2407,91 @@ export default class Grid extends Controller {
             oWhitespaceDialog.open();
         }.bind(this));
     }
+// Recent changes
 
+public onClickIRNJSON(): void {
+    var message = '';
+    var errormessage = '';
+    let that = this;
+    var formData = new FormData();
+    formData.append("companycode", this.Bukrs);
+    formData.append("document", this.Billingdocno);
+    BusyIndicator.show(0);
+    $.ajax({
+        url: "/sap/bc/http/sap/ZHTTP_IRNJSON",
+        method: "POST",
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function (result) {
+            BusyIndicator.hide();
+            MessageBox.information(result)
+
+        },
+        error: function (result) {
+            console.log(result);
+            BusyIndicator.hide();
+            errormessage = 'error';
+
+        }
+    });
+
+}
+
+public onClickEWBJSON(): void {
+    var message = '';
+    var errormessage = '';
+    let that = this;
+    var formData = new FormData();
+    formData.append("companycode", this.Bukrs);
+    formData.append("document", this.Billingdocno);
+    BusyIndicator.show(0);
+    $.ajax({
+        url: "/sap/bc/http/sap/ZHTTP_EWBJSON",
+        method: "POST",
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function (result) {
+            BusyIndicator.hide();
+            MessageBox.information(result)
+
+        },
+        error: function (result) {
+            console.log(result);
+            BusyIndicator.hide();
+            errormessage = 'error';
+
+        }
+    });
+
+}
+
+public onClickEWBBYIRNJSON(): void {
+    var message = '';
+    var errormessage = '';
+    let that = this;
+    var formData = new FormData();
+    formData.append("companycode", this.Bukrs);
+    formData.append("document", this.Billingdocno);
+    BusyIndicator.show(0);
+    $.ajax({
+        url: "/sap/bc/http/sap/ZHTTP_EWBBYIRNJSON",
+        method: "POST",
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function (result) {
+            BusyIndicator.hide();
+            MessageBox.information(result)
+
+        },
+        error: function (result) {
+            console.log(result);
+            BusyIndicator.hide();
+            errormessage = 'error';
+
+        }
+    });}
 
 }

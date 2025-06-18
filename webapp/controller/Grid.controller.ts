@@ -641,7 +641,12 @@ export default class Grid extends Controller {
         let fields = view.getContextByIndex(selectedIndex[0]).getProperty();
         let Bukrs = fields.Bukrs;
         let Billingdocno = fields.Billingdocno;
-
+        let billingdocumenttype = fields.billingdocumenttype;
+        
+        if ( billingdocumenttype == 'CBRE' ){
+            MessageToast.show("Document Type CBRE And G2 Only Used for Credit Note ");
+            return;
+        }
         //console.log(Bukrs);
         //console.log(Billingdocno);
         var payload = {
@@ -736,7 +741,12 @@ export default class Grid extends Controller {
         let fields = view.getContextByIndex(selectedIndex[0]).getProperty();
         let Bukrs = fields.Bukrs;
         let Billingdocno = fields.Billingdocno;
-
+        let billingdocumenttype = fields.billingdocumenttype;
+        
+        if ( billingdocumenttype == 'CBRE' ){
+            MessageToast.show("Document Type CBRE And G2 Only Used for Credit Note ");
+            return;
+        }
         //console.log(Bukrs);
         //console.log(Billingdocno);
         var payload = {
@@ -832,7 +842,12 @@ export default class Grid extends Controller {
         let fields = view.getContextByIndex(selectedIndex[0]).getProperty();
         let Bukrs = fields.Bukrs;
         let Billingdocno = fields.Billingdocno;
-
+        let billingdocumenttype = fields.billingdocumenttype;
+        
+        if ( billingdocumenttype == 'CBRE' ){
+            MessageToast.show("Document Type CBRE And G2 Only Used for Credit Note ");
+            return;
+        }
         //console.log(Bukrs);
         //console.log(Billingdocno);
         var payload = {
@@ -924,12 +939,17 @@ export default class Grid extends Controller {
 
 
     public onClickPrintForm21(): void {
+        debugger;
         let view = (this.byId("_IDGenSmartTable")! as any).getTable()
         let selectedIndex = view.getSelectedIndices();
         let fields = view.getContextByIndex(selectedIndex[0]).getProperty();
         let Bukrs = fields.Bukrs;
         let Billingdocno = fields.Billingdocno;
-
+        let billingdocumenttype = fields.billingdocumenttype;
+        if ( billingdocumenttype == 'CBRE' ){
+            MessageToast.show("Document Type CBRE And G2 Only Used for Credit Note ");
+            return;
+        }
         //console.log(Bukrs);
         //console.log(Billingdocno);
         var payload = {
@@ -1030,7 +1050,12 @@ export default class Grid extends Controller {
         let fields = view.getContextByIndex(selectedIndex[0]).getProperty();
         let Bukrs = fields.Bukrs;
         let Billingdocno = fields.Billingdocno;
+        let billingdocumenttype = fields.billingdocumenttype;
 
+        if ( billingdocumenttype == 'CBRE' ){
+            MessageToast.show("Document Type CBRE And G2 Only Used for Credit Note ");
+            return;
+        }
         //console.log(Bukrs);
         //console.log(Billingdocno);
         var payload = {
@@ -1130,6 +1155,12 @@ export default class Grid extends Controller {
         let fields = view.getContextByIndex(selectedIndex[0]).getProperty();
         let Bukrs = fields.Bukrs;
         let Billingdocno = fields.Billingdocno;
+        let billingdocumenttype = fields.billingdocumenttype;
+        
+        if ( billingdocumenttype == 'CBRE' ){
+            MessageToast.show("Document Type CBRE And G2 Only Used for Credit Note ");
+            return;
+        }
 
         //console.log(Bukrs);
         //console.log(Billingdocno);
@@ -1231,7 +1262,12 @@ export default class Grid extends Controller {
         let fields = view.getContextByIndex(selectedIndex[0]).getProperty();
         let Bukrs = fields.Bukrs;
         let Billingdocno = fields.Billingdocno;
-
+        let billingdocumenttype = fields.billingdocumenttype;
+        
+        if ( billingdocumenttype == 'CBRE' ){
+            MessageToast.show("Document Type CBRE And G2 Only Used for Credit Note ");
+            return;
+        }
         //console.log(Bukrs);
         //console.log(Billingdocno);
         var payload = {
@@ -1334,6 +1370,12 @@ export default class Grid extends Controller {
         let fields = view.getContextByIndex(selectedIndex[0]).getProperty();
         let Bukrs = fields.Bukrs;
         let Billingdocno = fields.Billingdocno;
+        let billingdocumenttype = fields.billingdocumenttype;
+        
+        if ( billingdocumenttype == 'CBRE' ){
+            MessageToast.show("Document Type CBRE And G2 Only Used for Credit Note ");
+            return;
+        }
 
         //console.log(Bukrs);
         //console.log(Billingdocno);
@@ -1437,7 +1479,12 @@ export default class Grid extends Controller {
         let fields = view.getContextByIndex(selectedIndex[0]).getProperty();
         let Bukrs = fields.Bukrs;
         let Billingdocno = fields.Billingdocno;
-
+        let billingdocumenttype = fields.billingdocumenttype;
+        
+        if ( billingdocumenttype == 'CBRE' ){
+            MessageToast.show("Document Type CBRE And G2 Only Used for Credit Note ");
+            return;
+        }
         //console.log(Bukrs);
         //console.log(Billingdocno);
         var payload = {
@@ -1540,6 +1587,12 @@ export default class Grid extends Controller {
         let fields = view.getContextByIndex(selectedIndex[0]).getProperty();
         let Bukrs = fields.Bukrs;
         let Billingdocno = fields.Billingdocno;
+        let billingdocumenttype = fields.billingdocumenttype;
+        
+        if ( billingdocumenttype == 'CBRE' ){
+            MessageToast.show("Document Type CBRE And G2 Only Used for Credit Note ");
+            return;
+        }
 
         //console.log(Bukrs);
         //console.log(Billingdocno);
@@ -1638,6 +1691,12 @@ export default class Grid extends Controller {
         let fields = view.getContextByIndex(selectedIndex[0]).getProperty();
         let Bukrs = fields.Bukrs;
         let Billingdocno = fields.Billingdocno;
+        let billingdocumenttype = fields.billingdocumenttype;
+        
+        if ( billingdocumenttype == 'CBRE' ){
+            MessageToast.show("Document Type CBRE And G2 Only Used for Credit Note ");
+            return;
+        }
 
         var payload = {
             companycode: Bukrs,
@@ -1732,6 +1791,12 @@ export default class Grid extends Controller {
         let fields = view.getContextByIndex(selectedIndex[0]).getProperty();
         let Bukrs = fields.Bukrs;
         let Billingdocno = fields.Billingdocno;
+        let billingdocumenttype = fields.billingdocumenttype;
+        
+        if ( billingdocumenttype == 'CBRE' ){
+            MessageToast.show("Document Type CBRE And G2 Only Used for Credit Note ");
+            return;
+        }
 
         var payload = {
             companycode: Bukrs,
@@ -1826,6 +1891,12 @@ export default class Grid extends Controller {
         let fields = view.getContextByIndex(selectedIndex[0]).getProperty();
         let Bukrs = fields.Bukrs;
         let Billingdocno = fields.Billingdocno;
+        let billingdocumenttype = fields.billingdocumenttype;
+        
+        if ( billingdocumenttype == 'CBRE' ){
+            MessageToast.show("Document Type CBRE And G2 Only Used for Credit Note ");
+            return;
+        }
 
         //console.log(Bukrs);
         //console.log(Billingdocno);
@@ -1924,6 +1995,12 @@ export default class Grid extends Controller {
         let fields = view.getContextByIndex(selectedIndex[0]).getProperty();
         let Bukrs = fields.Bukrs;
         let Billingdocno = fields.Billingdocno;
+        let billingdocumenttype = fields.billingdocumenttype;
+        
+        if ( billingdocumenttype == 'CBRE' ){
+            MessageToast.show("Document Type CBRE And G2 Only Used for Credit Note ");
+            return;
+        }
         var payload = {
             companycode: Bukrs,       // Value from the Input field
             document: Billingdocno  // Value from the DatePicker
@@ -2012,7 +2089,204 @@ export default class Grid extends Controller {
 
     }
 
-    public onEditData() {
+    public onClickCreditNote(): void {
+        debugger;
+        let view = (this.byId("_IDGenSmartTable")! as any).getTable()
+        let selectedIndex = view.getSelectedIndices();
+        let fields = view.getContextByIndex(selectedIndex[0]).getProperty();
+        let Bukrs = fields.Bukrs;
+        let Billingdocno = fields.Billingdocno;
+        var payload = {
+            companycode: Bukrs,       // Value from the Input field
+            document: Billingdocno  // Value from the DatePicker
+        };
+        var that = this;
+        var formData = new FormData();
+        formData.append("document", Billingdocno);
+        formData.append("companycode", Bukrs);
+        // var url1 = "/sap/bc/http/sap/ZHTTP_ZEWAYBILL_PRINTFORM/";
+        var url1 = "/sap/bc/http/sap/ZHTTP_PRINTFORM_NEW?";
+        var url2 = "&print=";
+        var url3 = "&doc=";
+        var url4 = "&cc=";
+        var geturlresult = url1 + url2 + 'CreditNote' + url3 + Billingdocno + url4 + Bukrs;
+        var urlresult = url1 + url2 + 'CreditNote';
+        $.ajax({
+            url: geturlresult,
+            method: "GET",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (result) {
+                console.log(result);
+                if (result == 'CBRE' || result == 'G2') {
+                    BusyIndicator.show(0);
+                    $.ajax({
+                        url: urlresult,
+                        method: "POST",
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function (result) {
+                            if (result.includes("companycode")) {
+
+                                MessageToast.show(result);
+                                BusyIndicator.hide();
+                                return;
+                            }
+                            //console.log(result)
+                            if (result.includes("document")) {
+                                MessageToast.show(result);
+                                BusyIndicator.hide();
+                                return;
+                            }
+
+                            if (result.includes("Document")) {
+                                MessageToast.show(result);
+                                BusyIndicator.hide();
+                                return;
+                          }
+                           var decodedPdfContent = atob(result);
+                        var byteArray = new Uint8Array(decodedPdfContent.length);
+                            for (var i = 0; i < decodedPdfContent.length; i++) {
+                                byteArray[i] = decodedPdfContent.charCodeAt(i);
+                            }
+                            var blob = new Blob([byteArray.buffer], {
+                                type: 'application/pdf'
+                            });
+                            var _pdfurl = URL.createObjectURL(blob);
+
+                            if (!that._PDFViewer) {
+                                that._PDFViewer = new PDFViewer({
+                                    width: "auto",
+                                    source: _pdfurl
+                                });
+                            } else {
+                                that._PDFViewer = new PDFViewer({
+                                    width: "auto",
+                                    source: _pdfurl
+                                });
+                            }
+                            BusyIndicator.hide();
+                            that._PDFViewer.open();
+                        },
+                        error: function (error) {
+                            BusyIndicator.hide();
+                        }
+                    });
+                }
+                else {
+                    MessageToast.show('Kindly Select a Correct Credit Note Type Document', { duration: 2000 });
+                }
+            }
+        });
+
+    }
+    public onClickDebitNote(): void {
+        let view = (this.byId("_IDGenSmartTable")! as any).getTable()
+        let selectedIndex = view.getSelectedIndices();
+        let fields = view.getContextByIndex(selectedIndex[0]).getProperty();
+        let Bukrs = fields.Bukrs;
+        let Billingdocno = fields.Billingdocno;
+        let billingdocumenttype = fields.billingdocumenttype;
+        
+        if ( billingdocumenttype == 'CBRE' ){
+            MessageToast.show("Document Type CBRE And G2 Only Used for Credit Note ");
+            return;
+        }
+        var payload = {
+            companycode: Bukrs,       // Value from the Input field
+            document: Billingdocno  // Value from the DatePicker
+        };
+        var that = this;
+        var formData = new FormData();
+        formData.append("document", Billingdocno);
+        formData.append("companycode", Bukrs);
+        // var url1 = "/sap/bc/http/sap/ZHTTP_ZEWAYBILL_PRINTFORM/";
+        var url1 = "/sap/bc/http/sap/ZHTTP_PRINTFORM_NEW?";
+        var url2 = "&print=";
+        var url3 = "&doc=";
+        var url4 = "&cc=";
+        var geturlresult = url1 + url2 + 'DebitNote' + url3 + Billingdocno + url4 + Bukrs;
+        var urlresult = url1 + url2 + 'DebitNote';
+        $.ajax({
+            url: geturlresult,
+            method: "GET",
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (result) {
+                console.log(result);
+                if ( result == 'L2') {
+                    BusyIndicator.show(0);
+                    $.ajax({
+                        url: urlresult,
+                        method: "POST",
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function (result) {
+                            if (result.includes("companycode")) {
+
+                                MessageToast.show(result);
+                                BusyIndicator.hide();
+                                return;
+                            }
+                            if (result.includes("This invoice has already been cancelled")) {
+                             MessageToast.show('This invoice has already been cancelled');
+                                BusyIndicator.hide();
+                                return;
+                            }
+                            //console.log(result)
+                            if (result.includes("document")) {
+                                MessageToast.show(result);
+                                BusyIndicator.hide();
+                                return;
+                            }
+
+                            if (result.includes("Document")) {
+                                MessageToast.show(result);
+                                BusyIndicator.hide();
+                                return;
+                          }
+                           var decodedPdfContent = atob(result);
+                        var byteArray = new Uint8Array(decodedPdfContent.length);
+                            for (var i = 0; i < decodedPdfContent.length; i++) {
+                                byteArray[i] = decodedPdfContent.charCodeAt(i);
+                            }
+                            var blob = new Blob([byteArray.buffer], {
+                                type: 'application/pdf'
+                            });
+                            var _pdfurl = URL.createObjectURL(blob);
+
+                            if (!that._PDFViewer) {
+                                that._PDFViewer = new PDFViewer({
+                                    width: "auto",
+                                    source: _pdfurl
+                                });
+                            } else {
+                                that._PDFViewer = new PDFViewer({
+                                    width: "auto",
+                                    source: _pdfurl
+                                });
+                            }
+                            BusyIndicator.hide();
+                            that._PDFViewer.open();
+                        },
+                        error: function (error) {
+                            BusyIndicator.hide();
+                        }
+                    });
+                }
+                else {
+                    MessageToast.show('Kindly Select a Debit Note', { duration: 2000 });
+                }
+            }
+        });
+
+    }
+    
+public onEditData() {
         let view = (this.byId("_IDGenSmartTable")! as any).getTable();
         let selectedIndex = view.getSelectedIndices();
         let fields = view.getContextByIndex(selectedIndex[0]).getProperty();
@@ -2493,5 +2767,5 @@ public onClickEWBBYIRNJSON(): void {
 
         }
     });}
-
+ 
 }

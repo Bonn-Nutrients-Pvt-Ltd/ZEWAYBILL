@@ -76,7 +76,7 @@
                         text="Export Detail"
                         press="openDialogDetail"
                     />
-                    <MenuButton
+                     <MenuButton
                         id="_IDGenMenuButton2"
                         text="PrintForms"
                         icon="sap-icon://action"
@@ -190,9 +190,23 @@
                                     icon="sap-icon://print"
                                     press="onClickPrintForm19"
                                 />
-                            </Menu>
+                                  <MenuItem
+                                    id="_IDCredit_Note"
+                                    text="Credit Note"
+                                    icon="sap-icon://print"
+                                    press="onClickCreditNote"
+                                    />
+                                    
+                           </Menu>
                         </menu>
-                    </MenuButton>
+                </MenuButton>
+                
+                <Button
+                         id="_IDDebit_Note"
+                                    text="Debit Note"
+                                    icon="sap-icon://print"
+                                    press="onClickDebitNote"
+                    />
                     <MenuButton
                         id="_IDGenMenuButton1"
                         text="Actions"
@@ -218,7 +232,8 @@
                                     icon="sap-icon://document-text"
                                     press="onClickEwayBillIrn"
                                 />
-                                <MenuItem
+                               
+                                <!-- <MenuItem
                                     id="_IDGenMenuItem3"
                                     text="Cancel IRN"
                                     icon="sap-icon://delete"
@@ -229,7 +244,7 @@
                                     text="Cancel EwayBill"
                                     icon="sap-icon://decline"
                                     press="onClickCancelEWB"
-                                />
+                                /> -->
                                 <MenuItem
                                     id="_IDGenMenuItem10"
                                     text="Update IRN"

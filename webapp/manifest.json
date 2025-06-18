@@ -1,0 +1,148 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+      "id": "zirncancel",
+      "type": "application",
+      "i18n": "i18n/i18n.properties",
+      "applicationVersion": {
+          "version": "0.0.1"
+      },
+      "title": "Cancel IRN",
+      "description": "An SAP Fiori application.",
+      "resources": "resources.json",
+      "sourceTemplate": {
+          "id": "@sap/generator-fiori:basic",
+          "version": "1.18.0",
+          "toolsId": "df438a35-8944-4d3e-8b02-ba2d59fb0c64"
+      },
+      "dataSources": {
+          "ZSB_ZEWAYBILL_VAN": {
+              "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZSB_ZEWAYBILL_VAN',Version='0001')/$value/",
+              "type": "ODataAnnotation",
+              "settings": {
+                  "localUri": "localService/mainService/ZSB_ZEWAYBILL_VAN.xml"
+              }
+          },
+          "mainService": {
+              "uri": "/sap/opu/odata/sap/ZSB_ZEWAYBILL/",
+              "type": "OData",
+              "settings": {
+                  "annotations": [
+                      "ZSB_ZEWAYBILL_VAN"
+                  ],
+                  "localUri": "localService/mainService/metadata.xml",
+                  "odataVersion": "2.0"
+              }
+          }
+      },
+      "crossNavigation": {
+          "inbounds": {
+              "ZIRNCANCEL-List": {
+                  "semanticObject": "ZIRNCANCEL",
+                  "action": "List",
+                  "title": "IRN Cancel",
+                  "subTitle": "ZIRNCNL",
+                  "signature": {
+                      "parameters": {},
+                      "additionalParameters": "allowed"
+                  }
+              }
+          }
+      }
+  },
+  "sap.ui": {
+      "technology": "UI5",
+      "icons": {
+          "icon": "",
+          "favIcon": "",
+          "phone": "",
+          "phone@2": "",
+          "tablet": "",
+          "tablet@2": ""
+      },
+      "deviceTypes": {
+          "desktop": true,
+          "tablet": true,
+          "phone": true
+      }
+  },
+  "sap.ui5": {
+      "flexEnabled": true,
+      "dependencies": {
+          "minUI5Version": "1.130.10",
+          "libs": {
+              "sap.m": {},
+              "sap.ui.core": {}
+          }
+      },
+      "contentDensities": {
+          "compact": true,
+          "cozy": true
+      },
+      "models": {
+          "i18n": {
+              "type": "sap.ui.model.resource.ResourceModel",
+              "settings": {
+                  "bundleName": "zirncancel.i18n.i18n"
+              }
+          },
+          "": {
+              "dataSource": "mainService",
+              "preload": true,
+              "settings": {}
+          }
+      },
+      "resources": {
+          "css": [
+              {
+                  "uri": "css/style.css"
+              }
+          ]
+      },
+      "routing": {
+          "config": {
+              "routerClass": "sap.m.routing.Router",
+              "controlAggregation": "pages",
+              "controlId": "app",
+              "transition": "slide",
+              "type": "View",
+              "viewType": "XML",
+              "path": "zirncancel.view",
+              "async": true,
+              "viewPath": "zirncancel.view"
+          },
+          "routes": [
+              {
+                  "pattern": "Display",
+                  "name": "Display",
+                  "target": "Display"
+              },
+              {
+                  "pattern": "",
+                  "name": "Grid",
+                  "target": "Grid"
+              }
+          ],
+          "targets": {
+              "Grid": {
+                  "id": "Grid",
+                  "name": "Grid"
+              },
+              "Display": {
+                  "id": "Display",
+                  "name": "Display"
+              }
+          }
+      },
+      "rootView": {
+          "viewName": "zirncancel.view.App",
+          "type": "XML",
+          "id": "App",
+          "async": true
+      },
+      "componentName": "zirncancel"
+  },
+  "sap.platform.abap": {
+      "uri": "/sap/bc/ui5_ui5/sap/zirncancel"
+  }
+}
